@@ -42,10 +42,10 @@ public class ComplexInteractionsTest {
         action.doubleClick(doubleClickButton).perform();
 
         Alert alert = driver.switchTo().alert();
-
-        assertEquals(alert.getText(), "You double clicked me.. Thank You..");
-
+        String alertText = alert.getText();
         alert.accept();
+        assertEquals(alertText, "You double clicked me.. Thank You..");
+
         driver.quit();
     }
 
